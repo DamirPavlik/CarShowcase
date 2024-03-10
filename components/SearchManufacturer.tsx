@@ -51,14 +51,14 @@ const SearchManufacturer = ({
             afterLeave={() => setQuery("")}
           >
             <Combobox.Options
-              className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm z-10"
+              className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm z-[99999]"
               static
             >
               {filteredManufacturers.map((item) => (
                 <Combobox.Option
                   key={item}
                   className={({ active }) =>
-                    `relative search-manufacturer__option ${
+                    `relative z-[99999] search-manufacturer__option ${
                       active ? "bg-primary-blue text-white" : "text-gray-900"
                     }`
                   }
